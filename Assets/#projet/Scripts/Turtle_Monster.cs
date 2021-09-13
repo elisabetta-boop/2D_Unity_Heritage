@@ -13,6 +13,10 @@ public class Turtle_Monster : Moving_Monster
         {
             start += Vector2.left *0.51f;
         }
+        else
+        {
+            start += Vector2.right *0.51f;
+        }
 
         Debug.DrawRay(start, direction * HitRange, Color.red);
         RaycastHit2D hit = Physics2D.Raycast(start, direction, HitRange);
